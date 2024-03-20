@@ -12,8 +12,8 @@ import pyautogui
 
 
 # Load the dataset
-st.write("""
-         # Is your Apple Good or Bad Quality? Lets find out!
+st.title("""
+         **Is your Apple Good or Bad Quality? Lets find out!**
          """)
 
 df = pd.read_csv('apple_quality.csv')
@@ -30,7 +30,7 @@ df.drop(df.tail(1).index, inplace=True)
 df['Acidity'] = df['Acidity'].astype(float)
 
 ################## Sidebar ##################
-st.dataframe(df)
+st.dataframe(df, height=250)
 
 # # Add a selectbox to the sidebar:
 st.sidebar.header('User Input Features')
@@ -75,8 +75,8 @@ prediction = xgb_new.predict(input_df)
 
 if prediction[0] == 0:
     st.write('This apple is of bad quality.')
-    st.image('photos/bad_apple.png', use_column_width=True)
+    st.image('images/bad_apple.png', use_column_width=True)
 else:
     st.write('This apple is of good quality.')
-    st.image('photos/good_apple.jpg', use_column_width=True)
+    st.image('images/good_apple.jpg', use_column_width=True)
 
