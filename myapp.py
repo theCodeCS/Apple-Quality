@@ -7,8 +7,6 @@ import xgboost as xgb
 from joblib import load
 import pyautogui
  
-import pyautogui
- 
 
 
 # Load the dataset
