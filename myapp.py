@@ -22,7 +22,7 @@ df.drop(df.tail(1).index, inplace=True)
 df['Acidity'] = df['Acidity'].astype(float)
 
 ################## Sidebar ##################
-st.dataframe(df, height=250)
+st.dataframe(df.head(100), height=250)
 
 # # Add a selectbox to the sidebar:
 st.sidebar.header('User Input Features')
