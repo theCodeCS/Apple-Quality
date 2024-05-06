@@ -1,5 +1,8 @@
 # Apple Quality Dataset
 
+## Streamlit Web App
+Link to Web App: [Checking Apple Quality](https://checking-apple-quality.streamlit.app/)
+
 ## Overview
 The Apple Quality dataset is a comprehensive collection of data pertaining to various attributes of apples, meticulously curated for the purpose of understanding the factors influencing apple quality. This dataset encompasses a wide range of characteristics such as color, weight, size, surface texture, presence of defects, and an overall quality rating assigned to each apple sample.
 
@@ -29,7 +32,15 @@ In this notebook, we have utilized various tabular predictive models for our Bin
 From there, we further optimized our models based on the hyperparameter tuning library - Optuna, with the goal of reaching a high AUROC score for our binary classification dataset.
 
 ## Results
-Our end results were impressive: we achieved an average accuracy of 91% for our voting classifier, and our PyTorch (DNN) model averaged an accuracy of 89% with an outstanding 96% AUC.
 
-## Insights
-Through this exploration, we learned that the appropriate models needed for binary classification datasets require understanding the underlying features of our data. Given that tabular data can be challenging for a DNN to predict, more refined predictive models are well-designed for such tasks.
+Our end results were indeed impressive. For our voting classifier, we achieved an average accuracy of 91% with an outstanding 97% AUC (Area Under the Receiver Operating Characteristic Curve). This suggests that our ensemble model performed exceptionally well in distinguishing between different classes of apple quality, achieving high accuracy and effectively capturing the trade-off between true positive rate and false positive rate.
+
+Additionally, our PyTorch (DNN) model exhibited promising performance, averaging an accuracy of 89% with an outstanding 96% AUC. Despite the inherent challenges of using deep neural networks for tabular data, our customized PyTorch model demonstrated robust predictive capabilities, achieving high accuracy and effectively leveraging the underlying patterns in the dataset to make accurate predictions.
+
+## Conclusion / Insights
+
+Through this exploration, we gained valuable insights into the predictive modeling of apple quality using tabular data. Our findings highlight the importance of selecting appropriate models tailored to the specific characteristics of the dataset. While ensemble methods like the voting classifier excel in leveraging the diversity of multiple models for tabular data, we were able to achieve high accuracy and robustness. Similarly, deep neural networks implemented in PyTorch offer a powerful framework for learning intricate patterns and relationships in complex datasets but require careful customization and tuning to achieve optimal performance and is likely less suited for tabular data.
+
+Furthermore, our results underline the significance of understanding the underlying features of the data when building predictive models. In the case of apple quality assessment, factors such as color, weight, size, surface texture, and presence of defects play pivotal roles in determining the overall quality rating. By incorporating these features into our models and optimizing their performance through techniques like hyperparameter tuning, we were able to achieve remarkable accuracy and AUC scores, showcasing the effectiveness of our approach.
+
+In conclusion, our study highlights the importance of utilizing a combination of traditional and deep learning-based approaches for predictive modeling tasks involving tabular data. By leveraging the strengths of different modeling techniques and optimizing their performance, we can gain valuable insights into complex phenomena such as apple quality assessment and pave the way for future advancements in agricultural research and quality control practices.
