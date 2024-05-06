@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from joblib import load
-import pyautogui
  
 
 # Load the dataset
@@ -49,9 +48,6 @@ def user_input_features():
     return features
 
 input_df = user_input_features()
-
-if st.sidebar.button("Reset"):
-    pyautogui.hotkey('ctrl', 'r')
 
 st.write('The user input features are:', input_df)
 
